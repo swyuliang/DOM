@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Gallery</title>
+</head>
+<body>
+    <h1>Snapshots</h1>
+    <ul>
+        <li>
+            <a href="images/flower1.jpg" title="A flower1 display" onclick="showPic(this); return false">Flower1</a>
+        </li>
+        <li>
+            <a href="images/flower2.jpg" title="A flower2 display" onclick="showPic(this); return false">Flower2</a>
+        </li>
+        <li>
+            <a href="images/balloon.jpg" title="Pink balloons" onclick="showPic(this); return false">Balloons</a>
+        </li>
+        <li>
+            <a href="images/girl.jpg" title="A pretty girl" onclick="showPic(this); return false">Girl</a>
+        </li>
+    </ul>
+    <img  id="placeholder" src="images/comic.jpg" alt="my image gallery" />
+</body>
+<script type="text/javascript">
+    function showPic(whichpic) {
+        var source = whichpic.getAttribute("href");
+        var placerholder = document.getElementById("placeholder");
+        placerholder.setAttribute("src",source);
+    }
+</script>
+</html>
