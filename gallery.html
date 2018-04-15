@@ -21,12 +21,16 @@
         </li>
     </ul>
     <img  id="placeholder" src="images/comic.jpg" alt="my image gallery" />
+    <p id="description">Choose an image.</p>
 </body>
 <script type="text/javascript">
     function showPic(whichpic) {
         var source = whichpic.getAttribute("href");
         var placerholder = document.getElementById("placeholder");
         placerholder.setAttribute("src",source);
+        var text = whichpic.getAttribute("title");
+        var description = document.getElementById("description");
+        description.childNodes[0].nodeValue = text;
     }
 </script>
 </html>
