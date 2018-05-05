@@ -4,63 +4,65 @@
     <meta charset="UTF-8">
     <title>Image Gallery</title>
 </head>
-<style type="text/css">
-    body{
-        font-family: "Helvetica","Arial",serif;
-        color :#333;
-        background-color: #ccc;
-        margin: 1em 10%;
-    }
-    h1{
-        color: #333;
-        background-color:transparent;
-    }
-    a{
-        color: #c60;
-        background-color: transparent;
-        font-weight: bold;
-        text-decoration: none;
-    }
-    ul{
-        padding:0;
-    }
-    li{
-        float: left;
-        padding: 1em;
-        list-style: none;
-    }
-    img{
-        display:block;
-        clear:both;
-    }
-</style>
+<link rel="stylesheet" href="styles/layout.css" media="screen" />
+<!--<style type="text/css">-->
+    <!--body{-->
+        <!--font-family: "Helvetica","Arial",serif;-->
+        <!--color :#333;-->
+        <!--background-color: #ccc;-->
+        <!--margin: 1em 10%;-->
+    <!--}-->
+    <!--h1{-->
+        <!--color: #333;-->
+        <!--background-color:transparent;-->
+    <!--}-->
+    <!--a{-->
+        <!--color: #c60;-->
+        <!--background-color: transparent;-->
+        <!--font-weight: bold;-->
+        <!--text-decoration: none;-->
+    <!--}-->
+    <!--ul{-->
+        <!--padding:0;-->
+    <!--}-->
+    <!--li{-->
+        <!--float: left;-->
+        <!--padding: 1em;-->
+        <!--list-style: none;-->
+    <!--}-->
+    <!--img{-->
+        <!--display:block;-->
+        <!--clear:both;-->
+    <!--}-->
+<!--</style>-->
 <body>
     <h1>Snapshots</h1>
-    <ul>
+    <ul id="imagegallery">
         <li>
-            <a href="images/flower1.jpg" title="A flower1 display" onclick="showPic(this); return false">Flower1</a>
+            <a href="images/flower1.jpg" title="A flower1 display" >Flower1</a>
         </li>
         <li>
-            <a href="images/flower2.jpg" title="A flower2 display" onclick="showPic(this); return false">Flower2</a>
+            <a href="images/flower2.jpg" title="A flower2 display" >Flower2</a>
         </li>
         <li>
-            <a href="images/balloon.jpg" title="Pink balloons" onclick="showPic(this); return false">Balloons</a>
+            <a href="images/balloon.jpg" title="Pink balloons" >Balloons</a>
         </li>
         <li>
-            <a href="images/girl.jpg" title="A pretty girl" onclick="showPic(this); return false">Girl</a>
+            <a href="images/girl.jpg" title="A pretty girl" >Girl</a>
         </li>
     </ul>
     <img  id="placeholder" src="images/comic.jpg" alt="my image gallery" />
     <p id="description">Choose an image.</p>
 </body>
-<script type="text/javascript">
-    function showPic(whichpic) {
-        var source = whichpic.getAttribute("href");
-        var placerholder = document.getElementById("placeholder");
-        placerholder.setAttribute("src",source);
-        var text = whichpic.getAttribute("title");
-        var description = document.getElementById("description");
-        description.childNodes[0].nodeValue = text;
-    }
-</script>
+<script src="scripts/showPic.js"></script>
+<!--<script type="text/javascript">-->
+    <!--function showPic(whichpic) {-->
+        <!--var source = whichpic.getAttribute("href");-->
+        <!--var placerholder = document.getElementById("placeholder");-->
+        <!--placerholder.setAttribute("src",source);-->
+        <!--var text = whichpic.getAttribute("title");-->
+        <!--var description = document.getElementById("description");-->
+        <!--description.childNodes[0].nodeValue = text;-->
+    <!--}-->
+<!--</script>-->
 </html>
