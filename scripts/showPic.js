@@ -11,7 +11,7 @@ function addLoadEvent(func) {
 }
 
 addLoadEvent(prepareGallery);
-addLoadEvent(showPic);
+// addLoadEvent(showPic);
 
 function prepareGallery() {
     if(!document.getElementsByTagName) return false;
