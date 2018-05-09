@@ -5,7 +5,7 @@ function addLoadEvent(func) {
     }else {
         window.onload = function () {
             oldonload();
-            func;
+            func();
         }
     }
 }
@@ -26,6 +26,8 @@ function prepareGallery() {
         }
     }
 }
+
+
 function showPic(whichpic) {
     if(!document.getElementById("placeholder")) return false;
     var source = whichpic.getAttribute("href");
@@ -57,7 +59,7 @@ function preparePlaceholder() {
     body.appendChild(placeholder);
     body.appendChild(description);
 }
-//addLoadEvent(preparePlaceholder);
+addLoadEvent(preparePlaceholder);
 addLoadEvent(prepareGallery);
 
 
