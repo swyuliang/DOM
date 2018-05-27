@@ -57,7 +57,7 @@ function preparePlaceholder() {
     body.appendChild(placeholder);
     body.appendChild(description);
 }
-//addLoadEvent(preparePlaceholder);
+addLoadEvent(preparePlaceholder);
 addLoadEvent(prepareGallery);
 
 
