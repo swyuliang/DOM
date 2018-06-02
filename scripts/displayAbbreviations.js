@@ -2,9 +2,6 @@
  * Created by Administrator on 2018/5/29.
  */
 function displayAbbreviations() {
-    if(!document.getElementsByTagName) return false;
-    if(!document.createElement) return false;
-    if(!document.createTextNode) return false;
     var abbreviatons = document.getElementsByTagName("abbr");
     if(abbreviatons.length < 1 ) return false;
     var defs = new Array();
