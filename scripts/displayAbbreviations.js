@@ -2,6 +2,7 @@
  * Created by Administrator on 2018/5/29.
  */
 function displayAbbreviations() {
+    console.log("ok1")
     //检测是否支持一下浏览器几个DOM方法
     if(!document.getElementsByTagName) return false;
     if(!document.createElement) return false;
