@@ -1,15 +1,14 @@
 function displayCitations() {
-    console.log("ok")
     var quotes = document.getElementsByTagName('blockquote');
-
     for (var i = 0 ; i < quotes.length ; i++){
         //检测获取的blockquote是否含有cite属性
         if(!quotes[i].getAttribute("cite")) continue;
         var url = quotes[i].getAttribute("cite");
         var quoteChildren = quotes[i].getElementsByTagName("*");
-        if(! quoteChildren,length < 1) continue;
+        if(quoteChildren.length < 1) continue;
+        console.log(quoteChildren);
         var elem = quoteChildren[quotes.length - 1];
-
+        console.log(elem);
         var link = document.createElement("a");
         var link_txt =document.createTextNode("source");
         link.appendChild(link_txt);
@@ -20,6 +19,6 @@ function displayCitations() {
 
         elem.appendChild(superscript);
     }
-
-    addLoadEvent(displayCitations);
 }
+
+addLoadEvent(displayCitations);
