@@ -7,7 +7,9 @@ function stripeTables() {
         rows = tables[i].getElementsByTagName("tr");
         for(var j =0; j< rows.length; j++){
             if(odd == true){
-                rows[j].style.backgroundColor = "#ffc";
+                // rows[j].style.backgroundColor = "#ffc";
+               addClass(rows[j],"odd");
+                console.log(rows[j]);
                 odd = false;
             }else {
                 odd = true;
@@ -16,4 +18,14 @@ function stripeTables() {
     }
 }
 
+function addClass(element,value) {
+    if(!element.className){
+        element.className = value;
+    }else{
+        newClassName = element.className;
+        newClassName += " ";
+        newClassName += value;
+        element.className = newClassName;
+    }
+}
 addLoadEvent(stripeTables);
