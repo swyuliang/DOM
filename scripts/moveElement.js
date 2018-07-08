@@ -35,6 +35,12 @@ function moveElement(elementID,final_x,final_y,interval) {
         clearTimeout(elem.movement);
     }
     // elem.style.position = "absolute";
+    if(!elem.style.left){
+        elem.style.left = "0px"
+    }
+    if(!elem.style.top){
+        elem.style.top = "0px"
+    }
     var xpos = parseInt(elem.style.left);
     var ypos = parseInt(elem.style.top);
 
