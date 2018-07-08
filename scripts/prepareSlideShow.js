@@ -24,7 +24,7 @@ function prepareSlideshow() {
     preview.setAttribute("alt","building blocks of web design");
     preview.setAttribute("id","preview");
     slideshow.appendChild(preview);
-    var list = document.getElementByid("linklist");
+    var list = document.getElementById("linklist");
     insertAfter(slideshow,list);
     var link = list.getElementsByTagName("a");
     //为mouseover事件添加动画效果
